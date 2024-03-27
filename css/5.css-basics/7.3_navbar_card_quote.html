@@ -4,10 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-  <title>navbar_card_quote</title>
+
+  <title>Combined Page</title>
+
   <style>
     * {
       margin: 0;
@@ -16,44 +22,104 @@
     }
 
     body {
-      font-family: "Comfortaa", sans-serif;
-      background-color: #f0f0f0;
+      background-color: #FEF5EF;
       text-align: center;
-      padding: 40px 0px;
+      padding-top: 20px;
     }
 
     .card {
+      font-family: "Comfortaa", sans-serif;
+      color: #b1fbce;
       background-color: #a068f7;
-      border: 2px solid #907baf;
+      border: 3px solid #907baf;
       box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
-      padding: 40px;
-      width: 400px;
-      margin: auto;
+      width: 500px;
+      padding: 80px;
+      margin: 120px auto 20px;
     }
 
-    header {
-      font-size: 32px;
-      color: #b1fbce;
-      margin-bottom: 15px;
+    .card header {
       font-weight: bold;
+      font-size: 36px;
+      margin-bottom: 15px;
     }
 
-    p {
-      font-size: 18px;
-      color: #b1fbce;
+    .card p {
+      font-size: 20px;
       line-height: 1.5;
       text-shadow: 2rem 1.2rem 0.15rem #ceb1fb;
+    }
+
+    ul {
+      list-style-type: none;
+      background-color: #a068f7;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      color: #b1fbce;
+      text-decoration: none;
+      display: block;
+      padding: 20px 20px;
+    }
+
+    li a:hover {
+      background-color: #7048ac;
+    }
+
+    blockquote {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      color: #333;
+      background-color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 80px auto;
+      width: 450px;
+      border: 2px solid #907baf;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    cite {
+      display: block;
+      text-align: right;
+      margin-top: 15px;
+      font-style: italic;
+      font-size: 18px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <section class="card">
     <header>Happy Birthday</header>
     <p>Wish you all the best</p>
   </section>
+
+  <blockquote>
+    &ldquo;Stay hungry, stay foolish.&rdquo; <cite>&mdash; Steve Jobs</cite>
+  </blockquote>
 
 </body>
 
