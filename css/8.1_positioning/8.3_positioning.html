@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8.3_positioning</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      position: relative;
+      width: 1000px;
+      height: 1000px;
+      margin: 50px;
+    }
+
+    .box {
+      font-size: 30px;
+      position: absolute;
+      border: 6px solid black;
+      background-color: white;
+    }
+
+    #div1 {
+      height: 40%;
+      width: 50%;
+    }
+
+    #div2 {
+      top: 25%;
+      left: 27%;
+      height: 40%;
+      width: 38%;
+    }
+
+    #div3 {
+      top: 57%;
+      height: 30%;
+      width: 100%;
+    }
+
+    #div4 {
+      right: 3.5%;
+      height: 100%;
+      width: 18%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="div1" class="box">div one</div>
+    <div id="div2" class="box">div two</div>
+    <div id="div3" class="box">div three</div>
+    <div id="div4" class="box">div four</div>
+  </div>
+</body>
+
+</html>
