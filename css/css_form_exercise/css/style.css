@@ -87,6 +87,10 @@ html {
   gap: 2px;
 }
 
+.languages-dropdown:focus {
+  outline: none;
+}
+
 .header-btn {
   width: 98px;
   height: 40px;
