@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Underwater Scene</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .ocean {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, #71C6F8 0%, #0B1B2B 100%);
+    }
+
+    .fish {
+      position: absolute;
+      width: 50px;
+      height: 30px;
+      background-color: #f90;
+      border-radius: 40px 50px 50px 0px;
+      animation: swim 10s infinite ease-in-out;
+    }
+
+    @keyframes swim {
+
+      0%,
+      100% {
+        transform: translateX(0) scaleX(1);
+      }
+
+      50% {
+        transform: translateX(100vw) scaleX(-1);
+      }
+    }
+
+    .bubble {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: bubble-float 8s infinite ease-in;
+    }
+
+    @keyframes bubble-float {
+      0% {
+        bottom: -10%;
+        opacity: 1;
+      }
+
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
+    }
+
+    .seaweed {
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 100px;
+      background: linear-gradient(to top, #003300, #009933);
+      border-radius: 10px;
+      animation: sway 5s infinite alternate ease-in-out;
+    }
+
+    @keyframes sway {
+      0% {
+        transform: rotate(-10deg);
+      }
+
+      100% {
+        transform: rotate(10deg);
+      }
+    }
+
+    .jellyfish {
+      position: relative;
+      width: 50px;
+      height: 40px;
+      background-color: #d4c6dbb1;
+      border-radius: 40% 40% 2px 0;
+      margin: 100px auto;
+      animation: jelly-fish-float 5s ease-in-out infinite;
+    }
+
+    .jellyfish::before,
+    .jellyfish::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 5px;
+      height: 80px;
+      background-color: #d4c6dbb1;
+      border-radius: 5px;
+      transform: translateX(-50%);
+      animation: dance 3s ease-in-out infinite;
+    }
+
+    .jellyfish::after {
+      left: 40%;
+      animation-delay: -2s;
+    }
+
+    @keyframes jelly-fish-float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes dance {
+
+      0%,
+      100% {
+        transform: rotate(-5deg);
+      }
+
+      50% {
+        transform: rotate(5deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ocean">
+    <div class="fish"></div>
+    <div class="bubble"></div>
+    <div class="fish" style="top: 75%; animation-duration: 12s;"></div>
+    <div class="bubble" style="left: 30%; animation-duration: 5s;"></div>
+    <div class="seaweed" style="left: 15%"></div>
+    <div class="seaweed" style="left: 75%"></div>
+    <div class="jellyfish"></div>
+  </div>
+</body>
+
+</html>
