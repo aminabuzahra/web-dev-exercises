@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Solar System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #000;
+    }
+
+    .solar-system {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 800px;
+      height: 800px;
+    }
+
+    .sun {
+      width: 50px;
+      height: 50px;
+      background-color: #ff0;
+      border-radius: 50%;
+    }
+
+    #mercury-orbit,
+    #venus-orbit,
+    #earth-orbit,
+    #mars-orbit {
+      position: absolute;
+      border: 1px dashed #fff;
+      border-radius: 50%;
+    }
+
+    .mercury,
+    .venus,
+    .earth,
+    .mars {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    #mercury-orbit {
+      width: 200px;
+      height: 100px;
+      animation: orbitMercury 88s linear infinite;
+    }
+
+    .mercury {
+      width: 10px;
+      height: 10px;
+      background-color: #aaa;
+    }
+
+    #venus-orbit {
+      width: 300px;
+      height: 250px;
+      animation: orbitVenus 224s linear infinite;
+    }
+
+    .venus {
+      width: 12px;
+      height: 12px;
+      background-color: #f90;
+    }
+
+    #earth-orbit {
+      width: 400px;
+      height: 350px;
+      animation: orbitEarth 365s linear infinite;
+    }
+
+    .earth {
+      width: 14px;
+      height: 14px;
+      background-color: #00f;
+    }
+
+    #mars-orbit {
+      width: 500px;
+      height: 450px;
+      animation: orbitMars 687s linear infinite;
+    }
+
+    .mars {
+      width: 12px;
+      height: 12px;
+      background-color: #b22222;
+    }
+
+    @keyframes orbitMercury {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbitVenus {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbitEarth {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes orbitMars {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div id="mercury-orbit">
+      <div class="mercury"></div>
+    </div>
+    <div id="venus-orbit">
+      <div class="venus"></div>
+    </div>
+    <div id="earth-orbit">
+      <div class="earth"></div>
+    </div>
+    <div id="mars-orbit">
+      <div class="mars"></div>
+    </div>
+  </div>
+</body>
+
+</html>
