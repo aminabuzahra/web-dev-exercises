@@ -5,6 +5,7 @@ const bool = true;
 console.log("typeof(num) is: " + typeof num);
 console.log("typeof(str) is: " + typeof str);
 console.log("typeof(bool) is: " + typeof bool);
+console.log("\n");
 
 // 2.Comapring Variable Types
 const firstVar = 42;
@@ -22,6 +23,7 @@ let noValue;
 let emptyValue = null;
 console.log("noValue = " + noValue);
 console.log("emptyValue = " + emptyValue);
+console.log("\n");
 /*
 The output of the above code will be:
 
