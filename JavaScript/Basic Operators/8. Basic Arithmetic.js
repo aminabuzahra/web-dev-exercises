@@ -70,7 +70,7 @@ if (num3 % divisor3 === 0) {
 }
 if (num3 % divisor4 === 0) {
   console.log(`${num3} is divisible by ${divisor4}.`);
-} else {
+} else { 
   console.log(`${num3} is not divisible by ${divisor4}.`);
 }
 
