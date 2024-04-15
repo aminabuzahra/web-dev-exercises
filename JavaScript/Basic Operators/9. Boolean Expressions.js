@@ -62,3 +62,4 @@ console.log(
   "10. Is the height of person1 greater than person2? " +
     (person1Height > person2Height)
 );
+console.log(15 % 4)
