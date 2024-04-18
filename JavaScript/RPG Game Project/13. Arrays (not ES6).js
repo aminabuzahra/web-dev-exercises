@@ -16,7 +16,7 @@ const questNames = [
   "Rescue the Princess",
 ];
 const reversedQuestNames = questNames.reverse();
-console.log(reversedQuestNames);
+console.log(reversedQuestNames.join(", "));
 
 // 3. Create a String of Monster Types
 console.log("\n3.");
@@ -53,14 +53,14 @@ const monsterList = ["Dragon", "Orc", "Goblin"];
 const lastMonster = monsterList.pop();
 console.log("Last Monster " + lastMonster);
 console.log("The updated array:");
-console.log(monsterList);
+console.log(monsterList.join(", "));
 
 // 7. Insert a Monster at the Beginning
 console.log("\n7.");
 const monsterList2 = ["Orc", "Goblin"];
 monsterList2.unshift("Dragon");
 console.log("The updated array:");
-console.log(monsterList2);
+console.log(monsterList2.join(", "));
 
 // 8. Remove the First Monster
 console.log("\n8.");
@@ -68,14 +68,14 @@ const monsterList3 = ["Dragon", "Orc", "Goblin"];
 const firstMonster = monsterList3.shift();
 console.log("First Monster " + firstMonster);
 console.log("The updated array:");
-console.log(monsterList3);
+console.log(monsterList3.join(", "));
 
 // 9. Concatenate Two Arrays of Heroes
 console.log("\n9.");
 const heroList1 = ["Archer", "Mage"];
 const heroList2 = ["Warrior", "Healer"];
 const heroListCombined = heroList1.concat(heroList2);
-console.log(heroListCombined);
+console.log(heroListCombined.join(", "));
 
 // 10. Sort Quests Alphabetically
 console.log("\n10.");
@@ -85,13 +85,13 @@ const questNames3 = [
   "Rescue the Princess",
 ];
 const sortedQuestNames = questNames3.sort();
-console.log(sortedQuestNames);
+console.log(sortedQuestNames.join(", "));
 
 // 11. Create Array from Magic Spells
 console.log("\n11.");
 const spellsString = "Fireball, Heal, Ice, Lance";
 const spellsArray = spellsString.split(", ");
-console.log(spellsArray);
+console.log(spellsArray.join(", "));
 
 // 12. Slice Array to Get Upcoming Quests
 console.log("\n12.");
@@ -102,7 +102,7 @@ const questNames4 = [
 ];
 const n = 2;
 const upcomingQuests = questNames4.slice(0, n);
-console.log(upcomingQuests);
+console.log(upcomingQuests.join(", "));
 
 // 13. Empty the Monster Array
 console.log("\n13.");
@@ -117,7 +117,7 @@ const weaponInventory2 = ["Sword", "Sheild"];
 const newWeapon = "Bow";
 weaponInventory2.push(newWeapon);
 console.log("The updated array:");
-console.log(weaponInventory2);
+console.log(weaponInventory2.join(", "));
 
 // 15. Sell the Last Item
 console.log("\n15.");
@@ -125,7 +125,7 @@ const inventory = ["Gold", "Magic Potion", "Shield"];
 const lastItem = inventory.pop();
 console.log("Sold: " + lastItem);
 console.log("The updated array:");
-console.log(inventory);
+console.log(inventory.join(", "));
 
 // 16. Insert a New Quest at the Beginning
 console.log("\n16.");
@@ -133,7 +133,7 @@ const questNames5 = ["Dragon's Lair", "Rescue the Princess"];
 const newQuest = "Defeat the Goblin King";
 questNames5.unshift(newQuest);
 console.log("The updated array:");
-console.log(questNames5);
+console.log(questNames5.join(", "));
 
 // 17. List All Quests Alphabetically
 console.log("\n17.");
@@ -143,7 +143,7 @@ const questNames6 = [
   "Defeat the Goblin King",
 ];
 const sortedQuestNames2 = questNames6.sort();
-console.log(sortedQuestNames2);
+console.log(sortedQuestNames2.join(", "));
 
 // 18. Check if Quest Exists
 console.log("\n18.");
@@ -161,4 +161,4 @@ if (questNames7.includes(quest)) {
 console.log("\n19.");
 const scores = [30, 80, 60, 90];
 const reversedScores = scores.reverse();
-console.log(reversedScores);
+console.log(reversedScores.join(", "));
