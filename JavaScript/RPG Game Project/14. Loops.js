@@ -114,25 +114,72 @@ for (let j = 0; j < questExperienceMatrix10[0].length; j++) {
   highestExperiences.push(maxExperienceInEachCategory);
   maxExperienceInEachCategory = 0;
 }
-console.log("Highest Experiences: " + highestExperiences.join(", "));
+console.log(
+  "Highest Experiences in Each Group (Column): " + highestExperiences.join(", ")
+);
 
 // 11. Count High-Difficulty Quests in Each Category
+console.log("\n11. Count High-Difficulty Quests in Each Category:");
 const questDifficultyMatrix11 = [
   [5, 7],
   [8, 6],
   [9, 7],
 ];
+const highDifficulty = 7;
+const highDifficultyCounts = [];
+let highDifficultyCount = 0;
+for (let j = 0; j < questDifficultyMatrix11[0].length; j++) {
+  for (let i = 0; i < questDifficultyMatrix11.length; i++) {
+    if (questDifficultyMatrix11[i][j] >= highDifficulty) {
+      highDifficultyCount++;
+    }
+  }
+  highDifficultyCounts.push(highDifficultyCount);
+  highDifficultyCount = 0;
+}
+console.log(
+  "High Difficulty Counts in Each Group (Column): " +
+    highDifficultyCounts.join(", ")
+);
 
 // 12. Sum of Rewards for High-Reward Quests by Category
+console.log("\n12. Sum of Rewards for High-Reward Quests by Category:");
 const questRewardsMatrix12 = [
   [50, 200],
   [300, 175],
   [120, 500],
 ];
+const highReward = 250;
+const highRewardSums = [];
+let highRewardSum = 0;
+for (let j = 0; j < questRewardsMatrix12[0].length; j++) {
+  for (let i = 0; i < questRewardsMatrix12.length; i++) {
+    if (questRewardsMatrix12[i][j] >= highReward) {
+      highRewardSum += questRewardsMatrix12[i][j];
+    }
+  }
+  highRewardSums.push(highRewardSum);
+  highRewardSum = 0;
+}
+console.log(
+  "High Reward Sums in Each Group (Column): " + highRewardSums.join(", ")
+);
 
 // 13. Average Health of Enemies by Type
+console.log("\n13. Average Health of Enemies by Type:");
 const enemyHealthMatrix13 = [
   [80, 120],
   [60, 90],
   [200, 150],
 ];
+
+const averageHealths = [];
+let totalHealth = 0;
+for (let i = 0; i < enemyHealthMatrix13.length; i++) {
+  for (let j = 0; j < enemyHealthMatrix13[i].length; j++) {
+    totalHealth += enemyHealthMatrix13[i][j];
+  }
+  averageHealths.push(totalHealth / enemyHealthMatrix13[i].length);
+  totalHealth = 0;
+}
+console.log("Average Health for each enemy type: " + averageHealths.join(", "));
