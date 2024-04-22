@@ -1,4 +1,116 @@
+// Impure Functions:
+console.log("Impure Functions:");
+console.log("=================");
+
+// 1. Initialize Character Stats
+console.log("1. Initialize Character Stats:");
+var chracterStats;
+function initializeCharacterStats() {
+  chracterStats = [];
+}
+
+initializeCharacterStats();
+console.log(chracterStats);
+
+// 2. Add Character Stats
+console.log("\n2. Add Character Stats:");
+function addCharacterStat(characterName, strength) {
+  chracterStats.push([characterName, strength]);
+}
+
+addCharacterStat("Amin", 100);
+console.log(chracterStats);
+
+// 3. Find Character Strength
+console.log("\n3. Find Character Strength:");
+console.log("I think this function is a pure function.");
+function findCharacterStrength(characterName) {
+  let characterStrength;
+  for (let i = 0; i < chracterStats.length; i++) {
+    if (chracterStats[i][0].toLowerCase() === characterName.toLowerCase()) {
+      characterStrength = chracterStats[i][1];
+      break;
+    }
+  }
+  return characterStrength ? characterStrength : "Character was not found";
+}
+
+console.log(findCharacterStrength("Amin"));
+
+// 4. Update Character Strength
+console.log("\n4. Update Character Strength:");
+function updateCharacterStrength(characterName, newStrength) {
+  let characterFound = false;
+  for (let i = 0; i < chracterStats.length; i++) {
+    if (chracterStats[i][0].toLowerCase() === characterName.toLowerCase()) {
+      chracterStats[i][1] = newStrength;
+      characterFound = true;
+      break;
+    }
+  }
+  if (!characterFound) {
+    console.log("Character was not found");
+  }
+}
+
+updateCharacterStrength("Amin", 200);
+console.log(chracterStats);
+
+// 5. Remove Character Stat
+console.log("\n5. Remove Character Stat:");
+function removeCharacterStat(characterName) {
+  for (let i = 0; i < chracterStats.length; i++) {
+    if (chracterStats[i][0].toLowerCase() === characterName.toLowerCase()) {
+      chracterStats.splice(i, 1);
+      break;
+    }
+  }
+}
+
+removeCharacterStat("Amin");
+console.log(chracterStats);
+
+// 6. List All Characters and Strengths
+console.log("\n6. List All Characters and Strengths:");
+console.log("I think this function is a pure function.");
+
+addCharacterStat("Amin", 100);
+addCharacterStat("Smith", 600);
+addCharacterStat("Ali", 200);
+addCharacterStat("Doe", 500);
+addCharacterStat("Jack", 700);
+addCharacterStat("John", 400);
+addCharacterStat("Sara", 300);
+
+function listAllCharacters() {
+  for (let i = 0; i < chracterStats.length; i++) {
+    console.log(`${chracterStats[i][0]} - ${chracterStats[i][1]}`);
+  }
+}
+
+listAllCharacters();
+
+// 7. Find Strongest Character
+console.log("\n7. Find Strongest Character:");
+console.log("I think this function is a pure function.");
+function findStrongestCharacter() {
+  if (!chracterStats) {
+    return "No characters found";
+  }
+  let strongestCharacter = chracterStats[0];
+  for (let i = 1; i < chracterStats.length; i++) {
+    if (chracterStats[i][1] > strongestCharacter[1]) {
+      strongestCharacter = chracterStats[i];
+    }
+  }
+  return strongestCharacter;
+}
+
+console.log(findStrongestCharacter());
+
 // Pure Functions
+console.log("\nPure Functions:");
+console.log("=================");
 
 // 1. Determine the Average Rating of Games
 // Input: [8.5, 7.9, 6.3, 9.2, 8.1]
