@@ -53,7 +53,7 @@ function updateCharacterStrength(characterName, newStrength) {
   }
 }
 
-updateCharacterStrength("Amin", 200);
+updateCharacterStrength("Aminn", 200);
 console.log(chracterStats);
 
 // 5. Remove Character Stat
