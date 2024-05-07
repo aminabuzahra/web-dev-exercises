@@ -29,8 +29,7 @@ const enemies = [
 function processEnemies(enemyObjects, callbackFunction) {
   // 1
   if (!Array.isArray(enemyObjects)) {
-    console.log("Expected an array of enemies");
-    return undefined;
+    throw new Error("Expected an array of enemies");
   }
 
   // 2
@@ -99,8 +98,7 @@ const quests = [
 function processQuests(questObjects, callbackFunction) {
   // 1
   if (!Array.isArray(questObjects)) {
-    console.log("Expected an array of quests");
-    return undefined;
+    throw new Error("Expected an array of quests");
   }
 
   // 2
@@ -179,8 +177,7 @@ const players = [
 function processPlayers(playerObjects, callbackFunction) {
   // 1
   if (!Array.isArray(playerObjects)) {
-    console.log("Expected an array of players");
-    return undefined;
+    throw new Error("Expected an array of players");
   }
 
   // 2
