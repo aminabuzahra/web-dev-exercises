@@ -47,7 +47,7 @@ function processEnemies(enemyObjects, callbackFunction) {
   }
 
   if (missingProperty) {
-    return undefined;
+    throw new Error("Enemies objects are not in the right structure");
   }
 
   // 3
@@ -116,7 +116,7 @@ function processQuests(questObjects, callbackFunction) {
   }
 
   if (missingProperty) {
-    return undefined;
+    throw new Error("Quests objects are not in the right structure");
   }
 
   // 3
@@ -201,7 +201,7 @@ function processPlayers(playerObjects, callbackFunction) {
   }
 
   if (missingProperty) {
-    return undefined;
+    throw new Error("Players objects are not in the right structure");
   }
 
   // 3
