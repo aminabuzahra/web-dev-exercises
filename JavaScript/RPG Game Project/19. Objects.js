@@ -398,7 +398,6 @@ gameWorld.createPlayer = function (
     level,
     xp,
     playerClass,
-
     move(newPosition) {
       this.position.x = newPosition.x;
       this.position.y = newPosition.y;
@@ -426,5 +425,31 @@ gameWorld.createPlayer = function (
         this.health += levelIncrease * 10;
       }
     },
+
+    playerClass(playerClass) {
+      this.playerClass = playerClass;
+    },
   };
+};
+
+// Exercise 10: NPC Interaction
+console.log("\nExercise 10: NPC Interaction");
+console.log("==============================");
+console.log();
+
+gameWorld.createNpc = function (name, health, position, invenotry, dialog) {
+  const npc = {
+    name,
+    position,
+    dialog,
+    talkToNPC() {
+      if (
+        this.position.x === player.position.x &&
+        this.position.y === player.position.y
+      ) {
+        console.log(`${this.name}: ${this.dialog}`);
+      }
+    },
+  };
+  return npc;
 };
